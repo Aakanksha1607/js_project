@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="./food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>DISH DIARIES 
+                <img src="./rb_2148986823.png"  alt="image">
+            </h1>
+            <form>
+                <input type="text" id="searchInput" placeholder="Search Recipes..." list="suggestions">
+                <datalist id="suggestions"></datalist>
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <div class="receipe_container">
+            <h2>Search your favourite Recipes...</h2>
+        </div>
+        <div class="receipe_details">
+            <div class="receipe_details_content"></div>
+            <button class="receipe-close-btn">&times;</button>
+        </div>
+    </main>
+
+    <script src="./food.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+/* Provided styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+    background-color: black;
+    color: white;
+}
+header nav {
+    background-color: rgb(61, 57, 57);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+header nav h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+header nav form {
+    display: flex;
+    justify-content: center;
+}
+header nav img{
+    width:80px;
+    position:absolute;
+    top:2%;
+}
+form input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+form input[type="text"], button[type="submit"] {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 6px;
+}
+form button[type="submit"] {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+form button[type="submit"]:hover, .receipe button:hover, .receipe-close-btn:hover {
+    background-color: blueviolet;
+}
+.receipe_container {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 3%;
+    width: 80%;
+    margin: 5% auto;
+    border-radius: 8%;
+}
+.receipe {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 5%;
+    box-shadow: 2px 3px 5px black;
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+.receipe img {
+    width: 100%;
+    border-radius: 5%;
+}
+.receipe:hover {
+    transform: scale(1.02);
+}
+.receipe h3 {
+    font-size: 24px;
+}
+.receipe p {
+    font-size: 20px;
+    color: black;
+    margin: 5px 0;
+}
+.receipe span {
+    font-weight: bold;
+}
+.receipe button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: blue;
+    color: aliceblue;
+    cursor: pointer;
+    margin: 10% auto;
+    border: none;
+    transition: background-color 0.5s ease-in-out;
+}
+.receipe_details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    border-radius: 16px;
+    width: 60%;
+    height: 80%;
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+    overflow-y: scroll;
+}
+.receipe_details_content {
+    padding: 40px;
+}
+.receipeName {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.ingredientList li {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.preparation p {
+    line-height: 30px;
+    white-space: pre-line;
+}
+.preparation, .ingredientList {
+    margin-bottom: 20px;
+}
+.receipe-close-btn {
+    border: none;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    width: 16px;
+}
+body::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+}
+main.blurred .receipe_container {
+    filter: blur(8px);
+    pointer-events: none;
+    transition: filter 0.1s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+    header nav form {
+        width: 80%;
+        margin-top: 10px;
+    }
+    header nav {
+        flex-direction: column;
+    }
+}
